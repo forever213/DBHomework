@@ -63,8 +63,10 @@
 			// alert(this.elements[0].value);
 			// alert(this.elements[1].value);
 			var res = SignIn(this.elements[0].value, this.elements[1].value);
-			if( flag && res[2] ) this.submit();
-			else for(var i = 0; i < res.length-1; ++i)
+			if( flag && res[2] ){
+				this.elements[0].value = res[0];
+				this.submit();
+			}else for(var i = 0; i < res.length-1; ++i)
 				res[i] && self.modifyError(this.elements[i], res[i]);
 		});
 
@@ -206,4 +208,5 @@
 		alert(result);
 		return result;
 	}
+
 })();

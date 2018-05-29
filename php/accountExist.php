@@ -1,6 +1,6 @@
 <?php
 
-//if ( !isset($_POST["signup-username"]) || !isset($_POST["signup-email"])) exit("Illegal Access!"); 
+if ( !isset($_POST["signup-username"]) || !isset($_POST["signup-email"])) exit("Illegal Access!"); 
 
 $servername = "localhost";
 $adminUsername = "root";

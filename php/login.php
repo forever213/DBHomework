@@ -20,8 +20,8 @@ else{
 	if( $info->num_rows > 0 )
 		while( $row = $info->fetch_assoc() )
 			if($row['Alias'] === $inputkey || $row['email'] === $inputkey){
-				($row['password'] === $password) ? ($exResult[2] = true) : ($exResult[1] = "Incorrect password") ;
 				$exResult[0] = false;
+				($row['password'] === $password) ? ($exResult[2] = true && $exResult[0] = $row['Alias']) : ($exResult[1] = "Incorrect password") ;
 				break;
 			}
 }

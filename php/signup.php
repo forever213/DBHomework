@@ -16,7 +16,6 @@ if ($conn->connect_error) {
 $sql = "USE playermansystem";
 if ($conn->query($sql) === TRUE) {
     echo "Use PlayerManagementSystem successfully";
-    echo "<script type='text/javascript'>alert('Hello World!');</script>";
 } else {
     echo "Error creating database: " . $conn->error;
 }
@@ -30,19 +29,26 @@ if( $stmt = $conn->prepare("INSERT INTO users(Alias,email,password) VALUES (?,?,
 
 	echo "<br>";
 	if( $stmt->execute() ){
-		echo "\nsign up seuccessfully!\n";
+		$conn->close();
+		?>
+		<html>
+		<link rel="stylesheet" type="text/css"  href="../css/countdown.css">
+		<div class="content">
+			<div id="head">
+				<h>sign up seuccessfully!</h>
+			</div>
+			<div id="countdown">
+				<h>REDIRACTE in 5 seconds</h>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/countdown5.js"></script>
+		<head><meta http-equiv="refresh" content="5;url=../index.php"> </head>
+		</html>
+		<?php
 	}else{
-		echo $inAlias ;
-		echo "<br>";
-		echo $inEmail ;
-		echo "<br>";
-		echo $inPass ;
-		echo "<br>";
 		echo $conn->error;
 	}
 }
-
-$conn->close();
 
 function test_input($data){
 	$data = trim($data);

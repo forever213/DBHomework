@@ -118,7 +118,7 @@ create table TypeTable
 /*==============================================================*/
 create table Users
 (
-   HumanID              int not null,
+   HumanID              int not null AUTO_INCREMENT,
    Email                varchar(256) not null,
    Alias                varchar(64) not null,
    GameID               int,

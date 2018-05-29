@@ -138,6 +138,9 @@ ul, ol {
 #signup-btn {
 	background-color: #EF6807;
 }
+#logout-btn {
+	background-color: red;
+}
 #login-btn:hover {
 	background: rgb(0,0,0,0);
 	letter-spacing: auto;
@@ -196,6 +199,45 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	background: linear-gradient(to bottom, rgba(5,55,64,1) 0%, rgba(5,55,64,0.6) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#053740', endColorstr='#99053740', GradientType=0 ); /* IE6-9 */
 }
+/*shesl style ↓*/
+.query-box {
+	background: #555559;
+	opacity: 0.8;
+	margin: 5px auto;
+	text-align: center;
+	width: 80%;
+	color: #FFEDD5;
+	border-radius: 5px;
+}
+.query-prefix-text {
+	float: left;
+	font-size: 16px;
+	font-weight: 500;
+	margin: 10px;
+}
+.query-prefix-text::-webkit-input-placeholder{
+	color:#E8E8E8;
+}
+.query-user-text {
+	float: left;
+	border: none;
+	background: #555559;
+	color: #FFEDD5;
+	margin: 10px;
+	width:50%;
+}
+.query-button {
+	text-align: right;
+	background: #EF6807;
+	opacity: 0.8;
+	border-radius: 5px;
+	border:none;
+	padding: 10px;
+}
+#query-result {
+	padding: 10px;
+}
+/*shesl style ↑*/
 .section-title {
 	padding: 25px 0 60px 0;
 }
@@ -410,6 +452,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20a6bb', end
 #team h3 {
 	color: #0a4b55;
 }
+
 img.img-circle.team-img {
 	width: 160px;
 	height: 160px;
