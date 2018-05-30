@@ -243,9 +243,9 @@
           <br><br>
           <h4>Query by Games name</h4>
             <div class="query-box">
-              <form action="welcome.php" id="query-games-box" class="query-games-class" method="POST">
-                <label class="query-prefix-text" for="query-games">GAME NAME</label>
-                <input class="query-user-text query-games-class" id="query-games" type="text"  placeholder="Please select a games" name="query-games">
+              <form action="php/queryGame.php" id="query-games-box" class="query-games-class" method="POST">
+                <label class="query-prefix-text" for="query-game">GAME NAME</label>
+                <input class="query-user-text query-games-class" id="query-game" type="text"  placeholder="Please select a games" name="query-game">
                 <input class="query-button query-games-class" id="query-games-sm" type="submit" value="QUERY">
               </form>
             </div>

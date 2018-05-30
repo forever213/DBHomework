@@ -60,12 +60,11 @@
 
 			!flag && event.preventDefault();
 			//res = [true, true, true]; //<-- this is debug message
-			// alert(this.elements[0].value);
-			// alert(this.elements[1].value);
 			var res = SignIn(this.elements[0].value, this.elements[1].value);
-			if( flag && res[2] ){
+			if( flag && (res[2]===true) ){
 				this.elements[0].value = res[0];
 				this.submit();
+			}else if( res[2] != false ){ alert(res[2]);
 			}else for(var i = 0; i < res.length-1; ++i)
 				res[i] && self.modifyError(this.elements[i], res[i]);
 		});
@@ -188,7 +187,6 @@
 				result = data;
 			}
 		});
-		alert(result);
 		return result;
 	}
 
@@ -205,7 +203,6 @@
 				result = data;
 			}
 		});
-		alert(result);
 		return result;
 	}
 

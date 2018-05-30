@@ -1,4 +1,6 @@
 <?php
+	if ( !isset($_POST['query-user']) ) exit("Illegal Access!");
+
 	$servername = "localhost";
 	$adminUsername = "root";
 	$adminPassword = "root";
@@ -20,7 +22,7 @@
 					if( $key == "GameID" ) $key = "Favorate Game";
 					$Info = $Info.$key.": ".$value.";<br>";
 				}
-				$Info = $Info . "<br><br>";
+				$Info = $Info . "<br>";
 			}
 			$queryResult = $Info;
 			}
@@ -31,7 +33,7 @@
 					if( $key == "GameID" ) $key = "Favorate Game";
 					$Info = $Info.$key.": ".$value.";<br>";
 				}
-				$Info = $Info . "<br><br>";
+				$Info = $Info . "<br>";
 			}
 			$queryResult = $Info;
 		}else $queryResult = "user ".$inputkey." does not exist";
